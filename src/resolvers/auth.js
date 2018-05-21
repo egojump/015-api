@@ -3,10 +3,6 @@ const jwt = require('jsonwebtoken')
 
 module.exports = {
   async signup(parent, { password, email, name }, ctx, info) {
-    if (!name) {
-      name = email.split('@')[0]
-    }
-
     password = await bcrypt.hash(password, 10)
     const user = await ctx.db.mutation.createUser({
       data: { name, email, password },
