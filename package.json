@@ -1,0 +1,19 @@
+{
+  "name": "hello-world",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "nodemon ."
+  },
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^2.0.1",
+    "dotenv": "^5.0.1",
+    "graphql-yoga": "^1.14.0",
+    "jsonwebtoken": "^8.2.1",
+    "prisma-binding": "^2.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.4"
+  }
+}

@@ -1,0 +1,8 @@
+type User {
+  id: ID! @unique
+  password: String!
+  email: String! @unique
+  name: String!
+  username: String
+  postsCount: Int! @default(value: 0)
+}
