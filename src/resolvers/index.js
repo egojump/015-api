@@ -1,5 +1,5 @@
-const auth = require('./auth')
-const page = require('./page')
+const auth = require('./mutations/auth')
+const page = require('./mutations/page')
 
 module.exports = {
   Mutation: {

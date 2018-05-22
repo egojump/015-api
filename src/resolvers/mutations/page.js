@@ -1,4 +1,4 @@
-const getUserId = require('../utils/getUserId')
+const getUserId = require('../../utils/getUserId')
 
 exports.createPage = async (parent, { name, category, creation }, ctx, info) => {
   const userId = getUserId(ctx)
