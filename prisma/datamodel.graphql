@@ -4,5 +4,33 @@ type User {
   email: String! @unique
   name: String!
   username: String
+  isCreator: Boolean
   postsCount: Int! @default(value: 0)
+  creatorPage: CreatorPage @relation(name: "PageOwner", onDelete: CASCADE)
+}
+
+type CreatorPage {
+  id: ID! @unique
+  owner: User! @relation(name: "PageOwner", onDelete: SET_NULL)
+  name: String!
+  creation: String!
+  introduction: String
+  category: Category!
+  rewards: [Reward!]! @relation(name: "RewardPage", onDelete: CASCADE)
+  isPublic: Boolean @default(value: false)
+}
+
+enum Category {
+  DrawingPainting
+  VideoFilm
+  Education
+}
+
+type Reward {
+  page: CreatorPage! @relation(name: "RewardPage", onDelete: SET_NULL)
+  title: String
+  description: String
+  patrons: [User!]!
+  price: Int
+  limit: Int
 }

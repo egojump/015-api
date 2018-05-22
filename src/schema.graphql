@@ -1,5 +1,6 @@
-# import Post from './generated/prisma.graphql'
 # import User from './generated/prisma.graphql'
+# import Category from './generated/prisma.graphql'
+# import CreatorPage from './generated/prisma.graphql'
 
 type Query {
   me: User
@@ -8,7 +9,12 @@ type Query {
 type Mutation {
   signup(email: String!, password: String!, name: String!): AuthPayload!
   login(email: String!, password: String!): AuthPayload!
+  createPage(name: String!, category: Category!, creation: String!): CreatorPage
 }
+
+# type CreatePagePayload {
+#   url: String!
+# }
 
 type AuthPayload {
   token: String!
