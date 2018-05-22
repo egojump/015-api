@@ -9,6 +9,7 @@ npm i -g prisma graphql-cli
 ## Development
 
 ```bash
+docker-compose up -d
 # Deploy/Update local Prisma server
 prisma deploy
 
