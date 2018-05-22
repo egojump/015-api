@@ -27,6 +27,7 @@ enum Category {
 }
 
 type Reward {
+  id: ID! @unique
   page: CreatorPage! @relation(name: "RewardPage", onDelete: SET_NULL)
   title: String
   description: String
